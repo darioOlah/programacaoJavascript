@@ -1,18 +1,18 @@
 let pratoPronto = (padrao, tempo) =>{
     if (isNaN(tempo) || tempo ===null || tempo ==='') { 
         tempo = padrao; 
-        console.log('Digite um tempo válido');
+        return 'Digite um tempo válido!';
     }
-    if (tempo < padrao){
+    else if (tempo < padrao){
         return 'Tempo insuficiente!';
     }
     else if(tempo >=padrao && tempo <=(2*padrao)){
         return 'Prato pronto, bom apetite!!!'
     }
     else if (tempo > (2*padrao) && tempo <= (3*padrao)){
-        return 'Sua comida queimou';
+        return 'Sua comida queimou!';
     } 
-    else if (tempo >(3*padrao)){
+    else {
         return 'KABUMMM!!!'
     }
 }
@@ -33,5 +33,4 @@ let microondas = (prato, tempo) =>{
     }
 }
 
-
-console.log(microondas('carne', 18));
+console.log(microondas('pipoca',35));
